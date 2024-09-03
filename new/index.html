@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Background with Fading to Black</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Each section takes full viewport height */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .black-fade-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+            filter: blur(15px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 20px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+            overflow: hidden;
+            margin-top: 20px; /* Add some space between heading and navbar */
+            display: inline-block; /* Center the navbar */
+            border-radius: 8px; /* Optional: Add rounded corners */
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 -->
+    <div class="section" style="background-image: url('food.png');">
+        <div class="black-fade-overlay"></div>
+        <div class="content">
+            <h1>Welcome to My Website</h1>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="location.html">Location</a>
+                <a href="cuisines.html">Cuisines</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>This is the main content of the first section.</p>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" style="background-image: url('food2.jpg');">
+        <div class="black-fade-overlay"></div>
+        <div class="content">
+            <h1>Explore Our Location</h1>
+            <p>This is the main content of the second section.</p>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" style="background-image: url('food3.jpg');">
+        <div class="black-fade-overlay"></div>
+        <div class="content">
+            <h1>Discover Our Cuisines</h1>
+            <p>This is the main content of the third section.</p>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" style="background-image: url('background4.jpg');">
+        <div class="black-fade-overlay"></div>
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p>This is the main content of the fourth section.</p>
+        </div>
+    </div>
+
+</body>
+</html>
